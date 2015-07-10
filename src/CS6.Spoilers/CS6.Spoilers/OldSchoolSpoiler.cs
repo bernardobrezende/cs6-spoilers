@@ -27,7 +27,7 @@ namespace CS6.Spoilers
         public string Description { get; set; }
 
         private IList<string> tags = new List<string>();
-        public IEnumerable<string> Tags
+        public IList<string> Tags
         {
             get { return tags; }
         }

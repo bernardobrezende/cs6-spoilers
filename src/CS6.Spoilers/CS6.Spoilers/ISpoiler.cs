@@ -9,7 +9,7 @@ namespace CS6.Spoilers
         DateTime Timestamp { get; }
         string Author { get; set; }
         string Description { get; set; }
-        IEnumerable<string> Tags { get; }
+        IList<string> Tags { get; }
         void AddTag(string tag);
         Task AddTagAsync(string tag);
     }

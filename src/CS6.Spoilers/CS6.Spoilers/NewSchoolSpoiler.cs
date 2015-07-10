@@ -14,15 +14,11 @@ namespace CS6.Spoilers
         public DateTime Timestamp { get; } = Now;
         public string Author { get; set; } = "Unknown";
         public string Description { get; set; }
-        private IList<string> tags = new List<string>();
-        public IEnumerable<string> Tags
-        {
-            get { return tags; }
-        }
+        public IList<string> Tags { get; } = new List<string>();
 
-        public override string ToString() => $"!!!{(tags.Contains("Death content") ? " HIGH" : string.Empty)} SPOILER ALERT !!! - [{Timestamp}] - {Description} - by {Author}";
+        public override string ToString() => $"!!!{(Tags.Contains("Death content") ? " HIGH" : string.Empty)} SPOILER ALERT !!! - [{Timestamp}] - {Description} - by {Author}";
 
-        public void AddTag(string tag) => tags?.Add(tag);
+        public void AddTag(string tag) => Tags?.Add(tag);
 
         public async Task AddTagAsync(string tag)
         {
