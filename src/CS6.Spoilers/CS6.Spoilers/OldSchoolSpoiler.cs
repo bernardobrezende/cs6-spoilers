@@ -54,7 +54,7 @@ namespace CS6.Spoilers
             {
                 if (String.IsNullOrEmpty(tag))
                 {
-                    throw new ArgumentNullException(nameof(tag));
+                    throw new ArgumentNullException("tag");
                 }
                 AddTag(tag);
             }
